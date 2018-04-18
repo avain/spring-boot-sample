@@ -6,11 +6,5 @@ pipeline {
         checkout scm
       }
     }
-    stage('test') {
-      steps {
-        sh 'mvn test'
-        junit 'target/surefire-reports/*.xml'
-      }
-    }
   }
 }
